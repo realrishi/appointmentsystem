@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<center><font color="white"><h1>Doctor Online Appointment System</h1></font></center>
+	{% load static %}
+     <link rel="stylesheet" type="text/css" href="{% static 'myapp/style7.css' %}" />
+</head>
+<body>
+   <section>
+	     <div class="container">
+	     <div class="form_content">
+		   <h2>What is Doctor Online Appointment System?</h2>
+		   <p>Doctor Online Appointment System
+		   	  is a online platform by which you 
+		   	  can easily take appointment
+		      of any doctor of any hospitels 
+		      which are associated with us.
+		   	</p>
+		   <a href="#">Read More</a>
+	     </div>
+	     <div class="login_form">
+	     	 <h1> Patient Sign In</h1>
+	       <form form action="logincode" method="post">
+	       	{% csrf_token %}
+		     <input type="text" name="txtemail" placeholder="Emailid"/required>
+		     <input type="password" name="txtpass" placeholder="Password"/required>
+		     <input type="submit" name="btnsubmit" value="Login" />
+	       </form>
+	       <a href="#">Forget Password</a>
+	     </div>
+        </div>
+   </section>
+</body>
+</html>

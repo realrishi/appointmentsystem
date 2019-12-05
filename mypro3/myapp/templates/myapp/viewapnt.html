@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Login Form</title>
+	{% load static %}
+     <link rel="stylesheet" type="text/css" href="{% static 'myapp/style10.css' %}" />
+</head>
+<body>
+    
+   <center><section>
+	     <div class="container">
+	     <div class="form_content">
+		 <h1>SHOW APPOINTMENT HERE</h1>
+{% if apntdata %}
+   <table border="1">
+    	<tr><th>Emailid</th><th>ApntTo</th><th>ApntDesc</th><th width="100">Date</th><th>Time</th><th colspan="2">Operation</th></tr>
+    {% for q in apntdata %}
+        <tr><td>{{ q.emailid }}</td><td>{{ q.apntto }}</td><td>{{ q.apntdesc }}</td><td width="100">{{ q.date }}</td><td>{{ q.time}}</td>
+        	<td><a href="editapnt?apntid={{q.id}}">Edit</a></td><td>
+            <a href="deleteapnt?apntid={{q.id}}">Delete</a></td></tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>No Apointment are available.</p>
+{% endif %}
+
+         <center><h1>SHOW APPOINTMENT REPLY HERE</h1></center>
+{% if replydata %}
+    <table border="1">
+        <tr><th>Doctor's Name</th><th>Replyto</th><th>ApntDesc</th><th>Date</th><th>Time</th></tr>
+    {% for q in replydata %}
+        <tr><td>{{ q.emailid }}</td><td>{{q.replyto}}</td><td>{{ q.replydesc }}</td><td>{{q.date}}</td><td>{{q.time}}</td>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>No Apointment are available.</p>
+{% endif %}
+         </div>
+     </div>
+    </section></center>
+</body>
+</html>

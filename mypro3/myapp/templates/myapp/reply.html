@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>			
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<center><h1><font color="white">Doctor Reply Page</font></h1></center>
+	{% load static %}
+     <link rel="stylesheet" type="text/css" href="{% static 'myapp/style11.css' %}" />
+</head>
+<body>
+   <section>
+	     <div class="container">
+	     <div class="form_content">
+		   <h2>You can easily Edit or Update your Appointment here.</h2>
+		   <a href="#">Read More</a>
+	     </div>
+	     <div class="login_form">
+	     	 <center><h1>Reply Page</h1></center>
+	       <form action="replycode" method="get">
+<input type="text" name="txtemail" placeholder="Enter Email" value="{{replydata.emailid}}" />
+<input type="text" name="txtreplyto" placeholder="Enter Reply to"  value="{{  replydata.apntto }}" />
+<input type="text" name="txtapntdesc" placeholder="Enter description"  value="{{  replydata.apntdesc }}" />
+<input type="date" name="date"/>
+<input type="time" name="time"/>
+<input type="submit" name="btnsubmit" value="Reply">
+</form>
+	     </div>
+        </div>
+   </section>
+</body>
+</html>

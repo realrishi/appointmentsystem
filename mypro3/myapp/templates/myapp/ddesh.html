@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	{% load static %}
+     <link rel="stylesheet" type="text/css" href="{% static 'myapp/style3.css' %}" />
+</head>
+<body>
+<div class="bgimage">
+	<div class="menu">
+		<div class="leftmenu">
+			<a href="http://127.0.0.1:8000/myapp/"><img src="{% static 'images/pic26.png' %}" width="70" height="70"></a>
+		</div>
+		<div class="leftmenu">
+			<h4>ONLINE_APPOINTMENT_SYSTEM</h4>
+		</div>
+	</div>
+	<div class="text">
+		<h4>Doctor . Patient . Appointments</h4>
+		<h1>Doctor DashBoard</h1>
+		<h3>You can Login or Registor here</h3>
+		<a href="dlogin"><button id="button1">Login</button></a>
+		<a href="dreg"><button id="button2">Registration</button></a>
+	</div>
+</div> 
+
+</body>
+</html>

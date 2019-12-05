@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Login Form</title>
+	{% load static %}
+     <link rel="stylesheet" type="text/css" href="{% static 'myapp/style8.css' %}"/>
+</head>
+<body>
+   <section>
+	     <div class="container">
+	     <div class="form_content">
+		   <h2>What is Doctor Online Appointment System?</h2>
+		   <p>Doctor Online Appointment System
+		   	  is a online platform by which you 
+		   	  can easily take appointment
+		      of any doctor of any hospitels 
+		      which are associated with us.
+		   	</p>
+		   <a href="#">Read More</a>
+	     </div>
+	     <div class="login_form">
+	     	 <h1>Patiant Registration</h1>
+	       <form form action="regcode" method="get">
+		     <input type="text" name="txtemail" placeholder="Emailid"/required/>
+		     <input type="password" name="txtpass" placeholder="Password"/required/>
+             <input type="text" name="txtmobile" placeholder="Enter mobileno" /required/>
+             <input type="text" name="txtaddress" placeholder="Enter Address"/required />
+             <input type="date" name="date"/required />
+             <input type="submit" name="btnsubmit" value="click" />
+	       </form>
+	       <a href="plogin">Click here for Login</a>
+	     </div>
+        </div>
+   </section>
+</body>
+</html>

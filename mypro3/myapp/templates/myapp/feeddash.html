@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<center><font color="white"><h1>Welcome in Online Appointment System</h1></font></center>
+</head>
+<body>	
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Login Form</title>
+	{% load static %}
+     <link rel="stylesheet" type="text/css" href="{% static 'myapp/style9.css' %}" />
+</head>
+<body>
+   <section>
+	     <div class="container">
+	     <div class="form_content">
+		   <h2>What is Doctor Online Appointment System?</h2>
+		   <p>Doctor Online Appointment System
+		   	  is a online platform by which you 
+		   	  can easily take appointment
+		      of any doctor of any hospitals 
+		      which are associated with us.
+		   	</p>
+		   <a href="#">Read More</a>
+	     </div>
+	     <div class="login_form">
+	     	 <h1>FeedBack Page</h1>
+	       <form form action="feedcode" method="get">
+		      <input type="text" name="txtemail" placeholder="Enter emailid" value="{{  uid }}" readonly="true"/required />
+             <input type="text" name="txtfbto" placeholder="Enter Doctor's Email"/required />
+             <input type="text" name="txtfbdesc" placeholder="Enter description"/required/>
+             <input type="date" name="date"/required />
+             <input type="time" name="time"/required />
+             <input type="submit" name="btnsubmit" value="Click">
+	       </form>
+	       <a href="viewfeed">View your FeedBack</a>
+	       <br>
+	       <br>
+	       <a href="logout">Logout</a>
+	     </div>
+        </div>
+   </section>
+</body>
+</html>
